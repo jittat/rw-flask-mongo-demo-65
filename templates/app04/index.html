@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/app.css">
+  </head>
+  <body>
+    <h1 class="header">Calculation game</h1>
+    <div class="content">
+      {% if message != '' %}
+        <div class="message">{{ message }}</div>
+      {% endif %}
+
+      <form action="/" method="POST">
+        {{ a }} + {{ b }} = 
+        <input type="text" name="answer">
+        <input type="submit" value="Answer">
+
+        <input type="hidden" name="a" value="{{ a }}">
+        <input type="hidden" name="b" value="{{ b }}">
+      </form>
+    </div>
+  </body>
+</html>
